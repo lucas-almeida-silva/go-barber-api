@@ -19,7 +19,7 @@ class CreateUserService {
       where: { email },
     });
 
-    if(checkUserExists) {
+    if (checkUserExists) {
       throw new AppError('Email address already used');
     }
 
@@ -28,7 +28,7 @@ class CreateUserService {
     const user = usersRepository.create({
       name,
       email,
-      password: hashedPassword
+      password: hashedPassword,
     });
 
     await usersRepository.save(user);

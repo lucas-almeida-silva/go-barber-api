@@ -1,4 +1,4 @@
-import { getRepository } from "typeorm";
+import { getRepository } from 'typeorm';
 import path from 'path';
 import fs from 'fs';
 import uploadConfig from '../config/upload';
@@ -18,15 +18,15 @@ class UpdateUserService {
 
     const user = await usersRepository.findOne(user_id);
 
-    if(!user) {
+    if (!user) {
       throw new AppError('Only authenticated users can change avatar', 401);
     }
 
-    if(user.avatar) {
+    if (user.avatar) {
       const userAvatarFilePath = path.join(uploadConfig.directory, user.avatar);
       const userAvatarFileExists = await fs.promises.stat(userAvatarFilePath);
 
-      if(userAvatarFileExists) {
+      if (userAvatarFileExists) {
         await fs.promises.unlink(userAvatarFilePath);
       }
     }

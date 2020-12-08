@@ -5,7 +5,7 @@ import uploadConfig from '../config/upload';
 import CreateUserService from '../services/CreateUserService';
 import UpdateUserAvatarService from '../services/UpdateUserAvatarService';
 
-import ensureAuthenticated from '../middlewares/ensureAuthenticated'
+import ensureAuthenticated from '../middlewares/ensureAuthenticated';
 
 const usersRouter = Router();
 const upload = multer(uploadConfig);
@@ -18,7 +18,7 @@ usersRouter.post('/', async (request, response) => {
   const user = await createUser.execute({
     name,
     email,
-    password
+    password,
   });
 
   const userWithoutPassword = {
@@ -41,7 +41,7 @@ usersRouter.patch(
 
     const user = await updateUserAvatar.execute({
       user_id: request.user.id,
-      avatarFilename: request.file.filename
+      avatarFilename: request.file.filename,
     });
 
     const userWithoutPassword = {
@@ -54,6 +54,7 @@ usersRouter.patch(
     };
 
     return response.json({ user: userWithoutPassword });
-  });
+  },
+);
 
 export default usersRouter;

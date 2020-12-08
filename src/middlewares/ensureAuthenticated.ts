@@ -14,11 +14,11 @@ interface TokenPayload {
 export default function ensureAuthenticated(
   request: Request,
   response: Response,
-  next: NextFunction
+  next: NextFunction,
 ): void {
   const authHeader = request.headers.authorization;
 
-  if(!authHeader) {
+  if (!authHeader) {
     throw new AppError('JWT token is missing', 401);
   }
 
@@ -37,5 +37,4 @@ export default function ensureAuthenticated(
   } catch {
     throw new AppError('Invalid JWT token', 401);
   }
-
 }
