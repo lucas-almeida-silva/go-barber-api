@@ -1,5 +1,4 @@
 import AppError from '@shared/errors/AppError';
-import UsersRepository from '../infra/typeorm/repositories/UsersRepository';
 
 import FakeHashProvider from '../providers/HashProvider/fakes/FakeHashProvider';
 import FakeUsersRepository from '../repositories/fakes/FakeUsersRepository';
@@ -108,6 +107,16 @@ describe('CreateUser', () => {
         email: 'johndoe@example.com',
         old_password: 'wrong-old-password',
         password: '123123',
+      }),
+    ).rejects.toBeInstanceOf(AppError);
+  });
+
+  it('shold not be able to update the profile from non-existing user', async () => {
+    await expect(
+      updateProfile.execute({
+        user_id: 'non-existing-user-id',
+        name: 'Test',
+        email: 'test@example.com',
       }),
     ).rejects.toBeInstanceOf(AppError);
   });
