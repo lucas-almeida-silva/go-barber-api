@@ -43,7 +43,7 @@ class S3StorageProvider implements IStorageProvider {
   public async deleteFile(file: string): Promise<void> {
     await this.client
       .deleteObject({
-        Bucket: 'appl-gobarber',
+        Bucket: uploadConfig.config.aws.bucket,
         Key: file,
       })
       .promise();
