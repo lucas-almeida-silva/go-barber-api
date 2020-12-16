@@ -16,7 +16,7 @@ class FakeNotificationsRepository implements INotificationsRepository {
 
     Object.assign(notification, { id: new ObjectID(), content, recipient_id });
 
-    await this.notifications.push(notification);
+    this.notifications.push(notification);
 
     return notification;
   }
