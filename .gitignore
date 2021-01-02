@@ -1,7 +1,7 @@
 .vscode/
 node_modules/
 build/
-
+dist
 coverage
 ormconfig.json
 .env
