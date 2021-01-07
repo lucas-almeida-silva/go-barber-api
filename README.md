@@ -1,6 +1,6 @@
 <p align="center">
-   <img src=".github/gobarber-logo.jpg" alt="GoBarber"/>
-</div>
+   <img src=".github/gobarber-logo.jpg" alt="GoBarber" width=700 height=400 />
+</p>
 
 # :page_with_curl: Table of Contents
 
