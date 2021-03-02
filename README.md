@@ -5,16 +5,37 @@
 # :page_with_curl: Table of Contents
 
 * [About](#information_source-about)
+* [Features](#rocket-features)
 * [Requirements](#page_with_curl-requirements)
 * [Technologies](#computer-technologies)
 * [Databases](#floppy_disk-databases)
-* [Features](#rocket-features)
 * [How to run](#seedling-how-to-run)
 * [License](#pencil-license)
 
 # :information_source: About
 
 GoBarber is a application to make appointments with hairdressers or barbers. The application has Web and Mobile versions, that was developed during the bootcamp GoStack offered by RocketSeat. This is the API that the web and mobile applications consumes.
+
+# :rocket: Features
+
+### Users
+
+- Create a user
+- Update user avatar
+- Update user profile
+- Login and authentication
+- Recover password
+
+### Providers
+
+- List providers.
+- List the availability of a provider in a month (whether or not there are times available on each day of the month).
+- List the availability of a provider in a day (available and unavailable times).
+- List the appointments of a day from a provider.
+
+### Appointments
+
+- Create an appointment.
 
 # :page_with_curl: Requirements
 
@@ -58,26 +79,11 @@ $ docker start redis
 
 **If you choose not to use the Docker, you must install each database manually.**
 
-# :rocket: Features
+You will need to run the migrations to create the tables in the database. To do this, just run the following command:
 
-### Users
-
-- Create an user
-- Update user avatar
-- Update user profile
-- Login and authentication
-- Recover password
-
-### Providers
-
-- List providers.
-- List the availability of a provider in a month (whether or not there are times available on each day of the month).
-- List the availability of a provider in a day (available and unavailable times).
-- List the appointments of a day from a provider.
-
-### Appointments
-
-- Create an appointment.
+```bash
+$ yarn typeorm migration:run
+```
 
 # :gear: Configurations
 
