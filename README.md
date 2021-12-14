@@ -7,8 +7,9 @@
 * [About](#information_source-about)
 * [Technologies](#computer-technologies)
 * [Requirements](#page_with_curl-requirements)
-* [Databases](#floppy_disk-databases)
 * [Features](#rocket-features)
+* [Databases](#floppy_disk-databases)
+* [Configurations](#gear-configurations)
 * [How to run](#seedling-how-to-run)
 * [License](#pencil-license)
 
