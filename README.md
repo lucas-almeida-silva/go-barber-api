@@ -5,16 +5,33 @@
 # :page_with_curl: Table of Contents
 
 * [About](#information_source-about)
-* [Features](#rocket-features)
-* [Requirements](#page_with_curl-requirements)
 * [Technologies](#computer-technologies)
+* [Requirements](#page_with_curl-requirements)
 * [Databases](#floppy_disk-databases)
+* [Features](#rocket-features)
 * [How to run](#seedling-how-to-run)
 * [License](#pencil-license)
 
 # :information_source: About
 
 GoBarber is a application to make appointments with hairdressers or barbers. The application has Web and Mobile versions, that was developed during the bootcamp GoStack offered by RocketSeat. This is the API that the web and mobile applications consumes.
+
+# :computer: Technologies
+
+- Node.js
+- Typescript
+- Express
+- TypeORM
+- Amazon S3
+- Amazon SES
+
+# :page_with_curl: Requirements
+
+- [Node.js](https://nodejs.org/)
+- [Yarn](https://yarnpkg.com/) (optional)
+- [Docker](https://www.docker.com/) (optional)
+- [AWS account](https://aws.amazon.com/) (optional)
+- [Git](https://git-scm.com/) (to clone the repository)
 
 # :rocket: Features
 
@@ -36,23 +53,6 @@ GoBarber is a application to make appointments with hairdressers or barbers. The
 ### Appointments
 
 - Create an appointment.
-
-# :page_with_curl: Requirements
-
-- [Node.js](https://nodejs.org/)
-- [Yarn](https://yarnpkg.com/) (optional)
-- [Docker](https://www.docker.com/) (optional)
-- [AWS account](https://aws.amazon.com/) (optional)
-- [Git](https://git-scm.com/) (to clone the repository)
-
-# :computer: Technologies
-
-- Node.js
-- Typescript
-- Express
-- TypeORM
-- Amazon S3
-- Amazon SES
 
 # :floppy_disk: Databases
 
